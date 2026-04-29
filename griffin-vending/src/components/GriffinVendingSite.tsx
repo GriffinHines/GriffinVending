@@ -63,7 +63,7 @@ export default function GriffinVendingSite() {
     { district: "Edgewood", venue: "Basement Bar (Patio)", city: "Atlanta, GA" },
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const subject = encodeURIComponent("Venue Inquiry – Griffin Vending");
     const body = encodeURIComponent(
