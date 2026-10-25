@@ -18,7 +18,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
-// Griffin Vending — Nightlife Vape Vending
+// Griffin Vending — Mystery Box Vending
 // Single-file React landing page. TailwindCSS required by host app.
 // Libraries available: framer-motion, lucide-react. No external images required.
 
@@ -30,23 +30,23 @@ export default function GriffinVendingSite() {
   const features = [
     {
       icon: <ScanLine className="h-6 w-6" aria-hidden />,
-      title: "Instant ID Check",
-      desc: "2-step age verification (ID scan + selfie match) keeps every vend compliant.",
+      title: "Surprise in Every Box",
+      desc: "A rotating assortment of sealed surprise boxes makes every purchase a reveal.",
     },
     {
       icon: <CreditCard className="h-6 w-6" aria-hidden />,
-      title: "Cashless Only",
-      desc: "Tap, chip, or mobile wallet with PCI-aligned gateways and auto-refund on failed vends.",
+      title: "Easy Cashless Checkout",
+      desc: "Quick, convenient card and mobile-wallet payments.",
     },
     {
       icon: <Gauge className="h-6 w-6" aria-hidden />,
       title: "Real-Time Inventory",
-      desc: "Low-stock alerts, planograms, and auto-reorder thresholds to prevent stockouts.",
+      desc: "Track stock and refresh the mix to keep customers curious.",
     },
     {
       icon: <SunMoon className="h-6 w-6" aria-hidden />,
-      title: "Nightlife-Proof",
-      desc: "Low-light UI, anti-jam vend, tamper sensors, and armored doors for busy venues.",
+      title: "Made for High-Traffic Venues",
+      desc: "A compact entertainment experience for bars, lounges, and other busy locations.",
     },
   ];
 
@@ -59,12 +59,12 @@ export default function GriffinVendingSite() {
     {
       num: "02",
       title: "Verify & Vend",
-      desc: "Guests pass the age-gate, pay cashless, and receive the product in seconds.",
+      desc: "Guests pick a mystery box, pay cashless, and discover their surprise.",
     },
     {
       num: "03",
       title: "Share Revenue",
-      desc: "Weekly payouts with transparent, exportable reports in your portal.",
+      desc: "We work with venue partners on clear revenue-sharing terms.",
     },
   ];
 
@@ -108,7 +108,7 @@ export default function GriffinVendingSite() {
             <a href="#how" className="hover:text-white">
               How it works
             </a>
-            <a href="#compliance" className="hover:text-white">
+            <a href="#mystery" className="hover:text-white">
               Compliance
             </a>
             <a href="#giving-back" className="hover:text-white">
@@ -139,14 +139,14 @@ export default function GriffinVendingSite() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
-              Nightlife-Ready{" "}
+              {" "}
               <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-indigo-400 bg-clip-text text-transparent">
-                Vape Vending
+                Mystery Box Vending
               </span>
             </h1>
 
             <p className="mt-5 max-w-xl text-neutral-300">
-              Cashless, compliant machines for clubs and late-night venues. Unlock new revenue without slowing the party.
+              Trading cards, toys, novelties, adult items, jewelry. The mystery box could be anything. Bring surprise-box vending to your venue and give guests something to talk about.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -168,48 +168,33 @@ export default function GriffinVendingSite() {
 
             <div className="mt-8 flex flex-wrap items-center gap-6 text-xs text-neutral-400">
               <span className="inline-flex items-center gap-2">
-                <ShieldCheck className="h-4 w-4" /> Age-gate & audit logs
+                <ShieldCheck className="h-4 w-4" /> Surprise-box experience
               </span>
               <span className="inline-flex items-center gap-2">
                 <CreditCard className="h-4 w-4" /> Tap-to-pay first
               </span>
               <span className="inline-flex items-center gap-2">
-                <Clock className="h-4 w-4" /> 24/7 monitoring
+                <Clock className="h-4 w-4" /> Rotating surprises
               </span>
             </div>
           </motion.div>
 
-          {/* Device Mock */}
+          {/* Family Guy mystery box GIF replaces the vending machine illustration */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="mt-12 lg:mt-0"
+            className="mt-12 flex items-center lg:mt-0"
           >
-            <div className="mx-auto max-w-md rounded-3xl border border-white/10 bg-white/5 p-5 shadow-2xl">
-              <div className="aspect-[3/5] rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 p-4">
-                <div className="flex items-center justify-between">
-                  <div className="h-7 w-24 rounded-lg bg-white/10" />
-                  <div className="h-7 w-7 rounded-lg bg-white/10" />
-                </div>
-
-                <div className="mt-4 grid grid-cols-3 gap-3">
-                  {Array.from({ length: 9 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="h-20 rounded-xl bg-gradient-to-br from-violet-400/20 to-fuchsia-400/20 ring-1 ring-inset ring-white/10"
-                    />
-                  ))}
-                </div>
-
-                <div className="mt-4 h-16 rounded-xl bg-white/5 ring-1 ring-inset ring-white/10" />
-
-                <div className="mt-3 flex items-center justify-between">
-                  <div className="h-8 w-28 rounded-lg bg-white/10" />
-                  <div className="h-10 w-10 rounded-full bg-white/10" />
-                </div>
-              </div>
-            </div>
+            <figure className="w-full overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl">
+              <img
+                src="/family-guy-mystery-box.gif"
+                alt="Family Guy mystery box scene: the mystery box could be anything"
+                className="h-auto w-full rounded-2xl"
+              />
+              <figcaption className="mt-3 text-center text-sm italic text-neutral-300">
+              </figcaption>
+            </figure>
           </motion.div>
         </div>
       </section>
@@ -219,8 +204,8 @@ export default function GriffinVendingSite() {
         <div className="mx-auto max-w-7xl px-4 py-16">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">Capabilities</p>
-            <h2 className="mt-2 text-3xl font-bold sm:text-4xl">Built for Busy Nights</h2>
-            <p className="mt-3 text-neutral-300">Fast, compliant, and data-driven from the first vend.</p>
+            <h2 className="mt-2 text-3xl font-bold sm:text-4xl">Built for Busy Venues</h2>
+            <p className="mt-3 text-neutral-300">An unexpected experience guests will want to try.</p>
           </div>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -281,74 +266,31 @@ export default function GriffinVendingSite() {
 
           <ul className="mt-8 space-y-2 text-sm text-neutral-400">
             <li className="flex items-start gap-2">
-              <CheckCircle2 className="mt-0.5 h-4 w-4" /> Weekly ACH payouts, exportable CSVs.
+              <CheckCircle2 className="mt-0.5 h-4 w-4" /> Revenue-sharing options for venue partners.
             </li>
             <li className="flex items-start gap-2">
-              <CheckCircle2 className="mt-0.5 h-4 w-4" /> Remote price updates and SKU swaps.
+              <CheckCircle2 className="mt-0.5 h-4 w-4" /> Fresh mystery-box assortments.
             </li>
             <li className="flex items-start gap-2">
-              <CheckCircle2 className="mt-0.5 h-4 w-4" /> Machine health alerts door, tilt, temperature.
+              <CheckCircle2 className="mt-0.5 h-4 w-4" /> Simple placement and ongoing restocking.
             </li>
           </ul>
         </div>
       </section>
 
-      {/* COMPLIANCE */}
-      <section id="compliance" className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 py-16">
-          <div className="grid items-start gap-10 lg:grid-cols-2">
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">Compliance</p>
-              <h2 className="mt-2 text-3xl font-bold sm:text-4xl">Age-Restricted Sales, Done Right</h2>
-              <p className="mt-4 text-neutral-300">
-                Griffin Vending uses multi-factor age verification with consent capture, audit logs,
-                and SKU restrictions per jurisdiction. We keep data minimal, encrypted at rest, and
-                retained only as required for compliance.
-              </p>
-
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <ShieldCheck className="h-6 w-6" />
-                  <div className="mt-2 font-semibold">ID + Liveness</div>
-                  <div className="text-sm text-neutral-300">Government ID scan plus selfie match.</div>
-                </div>
-
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <Clock className="h-6 w-6" />
-                  <div className="mt-2 font-semibold">Audit & Retention</div>
-                  <div className="text-sm text-neutral-300">Time-stamped consent, venue, SKU, outcome.</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-              <h3 className="text-xl font-semibold">Operator Portal Snapshot</h3>
-
-              <div className="mt-4 grid grid-cols-2 gap-4 text-sm text-neutral-300">
-                <div className="rounded-xl border border-white/10 bg-neutral-900 p-4">
-                  <div className="text-neutral-400">Gross Sales 7d</div>
-                  <div className="mt-2 text-2xl font-bold">$12,740</div>
-                </div>
-
-                <div className="rounded-xl border border-white/10 bg-neutral-900 p-4">
-                  <div className="text-neutral-400">Vends</div>
-                  <div className="mt-2 text-2xl font-bold">1,983</div>
-                </div>
-
-                <div className="rounded-xl border border-white/10 bg-neutral-900 p-4">
-                  <div className="text-neutral-400">Refunds</div>
-                  <div className="mt-2 text-2xl font-bold">0.7%</div>
-                </div>
-
-                <div className="rounded-xl border border-white/10 bg-neutral-900 p-4">
-                  <div className="text-neutral-400">Uptime</div>
-                  <div className="mt-2 text-2xl font-bold">99.7%</div>
-                </div>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-500">*Sample data for illustration only.</p>
-            </div>
+      {/* THE MYSTERY */}
+      <section id="mystery" className="border-t border-white/10">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-16 lg:grid-cols-[3fr_2fr]">
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-fuchsia-300">What's in the box?</p>
+            <h2 className="mt-2 text-3xl font-bold sm:text-4xl">Customized inventory to fit your venue</h2>
+            <p className="mt-4 text-neutral-300">Items generally sell for between $15 to $25 a pop. The contents of the boxes can be adjusted depending on your clientele.</p>
+            <p className="mt-4 text-sm text-neutral-400">Box contents and available selections may vary by machine. Product details and terms will be displayed at the point of sale.</p>
+            <a href="#contact" className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-fuchsia-500 to-indigo-500 px-5 py-3 font-medium">Bring the mystery to your venue <ArrowRight className="h-4 w-4" /></a>
           </div>
+          <figure className="mx-auto w-fit max-w-full rounded-3xl border border-white/10 bg-white/5 p-2 shadow-xl">
+            <img src="/pokemon-mystery-pack.png" alt="Pokémon trading card mystery package" className="block h-80 w-auto max-w-full rounded-xl object-contain" />
+          </figure>
         </div>
       </section>
 
@@ -364,7 +306,7 @@ export default function GriffinVendingSite() {
 
             <p className="mt-4 text-neutral-300">
               Every Griffin Vending machine helps support clean water projects around the world.
-              We donate 10% of profits to charity: water to help bring safe, clean drinking water
+              We donate 10% of profits to Charity: water to help bring safe, clean drinking water
               to communities in need.
             </p>
 
@@ -460,14 +402,14 @@ export default function GriffinVendingSite() {
           <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="space-y-2">
               <div className="font-semibold text-neutral-200">Griffin Vending</div>
-              <div>Nightlife vape vending • Atlanta, GA</div>
+              <div>Mystery box vending • Atlanta, GA</div>
             </div>
 
             <div className="flex gap-6">
               <a href="#features" className="hover:text-white">
                 Features
               </a>
-              <a href="#compliance" className="hover:text-white">
+              <a href="#mystery" className="hover:text-white">
                 Compliance
               </a>
               <a href="#giving-back" className="hover:text-white">
@@ -480,9 +422,7 @@ export default function GriffinVendingSite() {
           </div>
 
           <p className="mt-6 text-xs leading-relaxed text-neutral-500">
-            Disclaimer: Products are intended for adult consumers of legal age only. Availability and SKU mix vary by
-            jurisdiction. Age verification, advertising, and data retention practices are implemented to support compliance
-            but do not constitute legal advice. Operators should confirm local laws and required permits.
+            Mystery box contents vary. Product descriptions, prices, and any applicable purchase terms should be disclosed at the machine. Venue operators should confirm applicable local rules and permits.
           </p>
 
           <p className="mt-4 text-xs">© {new Date().getFullYear()} Griffin Vending. All rights reserved.</p>
