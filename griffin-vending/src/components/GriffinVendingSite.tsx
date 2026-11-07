@@ -138,11 +138,8 @@ export default function GriffinVendingSite() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
-              {" "}
-              <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-indigo-400 bg-clip-text text-transparent">
-                Mystery Box Vending
-              </span>
+           <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl text-white">
+  Mystery Box Vending
             </h1>
 
             <p className="mt-5 max-w-xl text-neutral-300">
@@ -154,7 +151,7 @@ export default function GriffinVendingSite() {
                 href="#contact"
                 className="group inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-fuchsia-500 to-indigo-500 px-5 py-3 font-medium shadow-lg shadow-fuchsia-900/30"
               >
-                Get a Machine{" "}
+                Host a Machine{" "}
                 <ArrowRight className="h-4 w-4 transition -translate-x-0 group-hover:translate-x-0.5" />
               </a>
 
