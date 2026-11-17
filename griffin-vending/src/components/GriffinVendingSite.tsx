@@ -149,7 +149,7 @@ export default function GriffinVendingSite() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-fuchsia-500 to-indigo-500 px-5 py-3 font-medium shadow-lg shadow-fuchsia-900/30"
+                className="group inline-flex items-center gap-2 rounded-2xl bg-white text-black hover:bg-neutral-200 px-5 py-3 font-medium shadow-lg shadow-fuchsia-900/30"
               >
                 Host a Machine{" "}
                 <ArrowRight className="h-4 w-4 transition -translate-x-0 group-hover:translate-x-0.5" />
@@ -283,7 +283,7 @@ export default function GriffinVendingSite() {
             <h2 className="mt-2 text-3xl font-bold sm:text-4xl">Customized inventory to fit your venue</h2>
             <p className="mt-4 text-neutral-300">Items generally sell for between $15 to $25 a pop. The contents of the boxes can be adjusted depending on your clientele.</p>
             <p className="mt-4 text-sm text-neutral-400">Box contents and available selections may vary by machine. Product details and terms will be displayed at the point of sale.</p>
-            <a href="#contact" className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-fuchsia-500 to-indigo-500 px-5 py-3 font-medium">Bring the mystery to your venue <ArrowRight className="h-4 w-4" /></a>
+            <a href="#contact" className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-white text-black hover:bg-neutral-200 px-5 py-3 font-medium">Bring the mystery to your venue <ArrowRight className="h-4 w-4" /></a>
           </div>
           <figure className="mx-auto w-fit max-w-full rounded-3xl border border-white/10 bg-white/5 p-2 shadow-xl">
             <img src="/pokemon-mystery-pack.png" alt="Pokémon trading card mystery package" className="block h-80 w-auto max-w-full rounded-xl object-contain" />
@@ -371,7 +371,7 @@ export default function GriffinVendingSite() {
             <div className="flex items-center justify-between gap-4">
               <button
                 type="submit"
-                className="rounded-2xl bg-gradient-to-r from-fuchsia-500 to-indigo-500 px-6 py-3 font-medium"
+                className="rounded-2xl bg-white text-black hover:bg-neutral-200 px-6 py-3 font-medium"
               >
                 Send Inquiry
               </button>
